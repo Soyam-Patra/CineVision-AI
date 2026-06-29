@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+
+app/cache/predictions/*
+!app/cache/predictions/.gitkeep

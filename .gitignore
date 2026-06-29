@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+# Environment
+.env
+
+# Cache
+backend/app/cache/predictions/*
+!backend/app/cache/predictions/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
