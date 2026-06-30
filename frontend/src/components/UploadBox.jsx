@@ -48,34 +48,35 @@ function UploadBox({ onPredict,recognized,onImageSelect }) {
         console.log("image state:", image);
 
         const formData = new FormData();
-
+        formData.append("file", selectedImage);
         console.log("FormData file:", formData.get("file"));
 
-        formData.append("file", selectedImage);
+        
 
-        try{
+        try {
 
-            const response = await api.post(
-                "/predict",
-                formData
-            );
+            const response = await api.post("/predict", formData);
+
+            console.log("STATUS:", response.status);
+            console.log("DATA:", response.data);
 
             onPredict(response.data);
 
-        }
+        catch(err){
 
-        catch (err) {
-            console.log("ERROR:", err);
-            console.log("RESPONSE:", err.response);
-            console.log("DATA:", err.response?.data);
-            console.log("MESSAGE:", err.message);
+            console.log(err);
 
             onPredict({
-                success: false,
-                message: "Prediction failed."
+                success:false,
+                message: err.response?.data?.message || err.message
             });
-        }
 
+        }
+        finally{
+
+            setLoading(false);
+
+        }
         setLoading(false);
     };
 
