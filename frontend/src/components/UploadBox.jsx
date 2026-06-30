@@ -44,14 +44,10 @@ function UploadBox({ onPredict,recognized,onImageSelect }) {
 
         setLoading(true);
 
-        console.log("selectedImage:", selectedImage);
-        console.log("image state:", image);
-
         const formData = new FormData();
         formData.append("file", selectedImage);
-        console.log("FormData file:", formData.get("file"));
 
-        
+        console.log("FormData file:", formData.get("file"));
 
         try {
 
@@ -62,24 +58,26 @@ function UploadBox({ onPredict,recognized,onImageSelect }) {
 
             onPredict(response.data);
 
-        catch(err){
+        } catch (err) {
 
+            console.log("======== AXIOS ERROR ========");
             console.log(err);
+            console.log("message:", err.message);
+            console.log("code:", err.code);
+            console.log("response:", err.response);
+            console.log("response data:", err.response?.data);
 
             onPredict({
-                success:false,
+                success: false,
                 message: err.response?.data?.message || err.message
             });
 
-        }
-        finally{
+        } finally {
 
             setLoading(false);
 
         }
-        setLoading(false);
     };
-
     return(
 
         <>
