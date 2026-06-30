@@ -6,8 +6,8 @@ An AI-powered movie recommendation system that recognizes actors from uploaded i
 
 # Demo
 
-YouTube Video
-> https://youtu.be/Z1Pp8LqHlxw?si=rGktyRv194vY6hlt
+Live Demo
+> https://cine-vision-ai.vercel.app
 ---
 
 # Screenshots
