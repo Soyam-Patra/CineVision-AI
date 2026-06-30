@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt && \
-    pip uninstall -y opencv-python || true && \
-    pip install --no-cache-dir opencv-python-headless==4.13.0.92
-
+    pip list && \
+    pip show opencv-python || true && \
+    pip show opencv-python-headless || true
 COPY . .
 
 EXPOSE 8000
