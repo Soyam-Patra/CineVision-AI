@@ -64,18 +64,16 @@ function UploadBox({ onPredict,recognized,onImageSelect }) {
 
         }
 
-        catch(err){
-
-            console.log(err);
+        catch (err) {
+            console.log("ERROR:", err);
+            console.log("RESPONSE:", err.response);
+            console.log("DATA:", err.response?.data);
+            console.log("MESSAGE:", err.message);
 
             onPredict({
-
-                success:false,
-
-                message:"Prediction failed."
-
+                success: false,
+                message: "Prediction failed."
             });
-
         }
 
         setLoading(false);
