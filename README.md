@@ -6,17 +6,15 @@ An AI-powered movie recommendation system that recognizes actors from uploaded i
 
 # Demo
 
-> 📹 Demo Video: *(Add your Google Drive or YouTube link here after recording)*
-
+> 
 ---
 
 # Screenshots
 
 ## Home Page
 
-> Add screenshot here
 
-![Home](assets/homepage.png)
+![Home](assets/Home.png)
 
 ---
 
