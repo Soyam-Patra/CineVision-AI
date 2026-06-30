@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "eb70312a-8991-427e-8157-27ef5d1011b2",
+    "name": "CineVision AI APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56265137",
+    "_collection_link": "https://go.postman.co/collection/56265137-eb70312a-8991-427e-8157-27ef5d1011b2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Movies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/movies/Brad%20Pitt",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "movies",
+            "Brad%20Pitt"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/health",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "74a69378-357b-4728-aedc-20eca1f701c2",
+              "src": "/D:/test.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
