@@ -21,18 +21,19 @@ An AI-powered movie recommendation system that recognizes actors from uploaded i
 ---
 
 ## Actor Recognition
-
-> Add screenshot here
-
+Confidence
 ![Prediction](assets/prediction.png)
+
+Recommendation
+![Prediction](assets/prediction1.png)
 
 ---
 
 ## Multiple Face Detection
 
-> Add screenshot here
-
+Actor Named Buttons
 ![Multiple Faces](assets/multiple_faces.png)
+![Multiple Faces](assets/multiple_faces1.png)
 
 ---
 
