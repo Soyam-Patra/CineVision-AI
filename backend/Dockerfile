@@ -13,11 +13,13 @@ RUN apt-get update && apt-get install -y \
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt && \
-    pip list && \
-    pip show opencv-python || true && \
-    pip show opencv-python-headless || true
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
+
+# Debug OpenCV
+RUN python -c "import cv2; print(cv2.__file__)"
+RUN python -c "import cv2; print(cv2.getBuildInformation())"
 
 EXPOSE 8000
 
