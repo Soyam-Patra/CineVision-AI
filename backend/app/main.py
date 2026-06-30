@@ -16,7 +16,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://cine-vision-ai.vercel.app",
-        "https://cine-vision-joz4df4c6-imsoyam.vercel.app",
+        "https://cine-vision-9bp93h8rz-imsoyam.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
